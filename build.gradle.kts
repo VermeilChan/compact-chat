@@ -1,15 +1,15 @@
 object Constants {
-    const val MINECRAFT_VERSION = "1.20.6"
-    const val YARN_VERSION = "1.20.6+build.3"
-    const val LOADER_VERSION = "0.15.11"
+    const val MINECRAFT_VERSION = "1.21.3"
+    const val YARN_VERSION = "1.21.3+build.2"
+    const val LOADER_VERSION = "0.16.9"
 
-    const val FABRIC_API_VERSION = "0.99.4+1.20.6"
-    const val MOD_MENU_VERSION = "10.0.0-beta.1"
-    const val CLOTH_CONFIG_VERSION = "14.0.126"
+    const val FABRIC_API_VERSION = "0.107.3+1.21.3"
+    const val MOD_MENU_VERSION = "12.0.0-beta.1"
+    const val CLOTH_CONFIG_VERSION = "16.0.141"
 }
 
 plugins {
-    id("fabric-loom") version "1.6-SNAPSHOT"
+    id("fabric-loom") version "1.8-SNAPSHOT"
 }
 
 group = "dev.caoimhe.compactchat"
@@ -18,7 +18,6 @@ base.archivesName = "compact-chat"
 
 loom {
     runs {
-        // Compact Chat is a client-sided only mod, it won't do anything on the server.
         remove(getByName("server"))
     }
 }
@@ -38,9 +37,6 @@ dependencies {
         exclude(group = "net.fabricmc.fabric-api")
     }
 
-    // This is not required by Compact Chat, but it is required by Mod Menu.
-    // We don't want to force people to have it, but we need Mod Menu in the development environment,
-    // so we'll just include it for that.
     modRuntimeOnly("net.fabricmc.fabric-api:fabric-api:${Constants.FABRIC_API_VERSION}")
 }
 
