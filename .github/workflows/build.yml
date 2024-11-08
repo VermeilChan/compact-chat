@@ -23,9 +23,6 @@ jobs:
           distribution: graalvm
           java-version: 21
 
-      - name: Upgrade Gradle
-        run: ./gradlew wrapper --gradle-version=8.10.2 --distribution-type=bin # just hear me out okay, i dont want to dowwnload a whole IDE just for this
-
       - name: Setup Gradle
         uses: gradle/actions@v4.1.0
 
