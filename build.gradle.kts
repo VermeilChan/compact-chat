@@ -3,17 +3,17 @@ object Constants {
     const val YARN_VERSION = "1.21.3+build.2"
     const val LOADER_VERSION = "0.16.9"
 
-    const val FABRIC_API_VERSION = "0.107.3+1.21.3"
+    const val FABRIC_API_VERSION = "0.110.0+1.21.3"
     const val MOD_MENU_VERSION = "12.0.0-beta.1"
     const val CLOTH_CONFIG_VERSION = "16.0.141"
 }
 
 plugins {
-    id("fabric-loom") version "1.8-SNAPSHOT"
+    id("fabric-loom") version "1.9-SNAPSHOT"
 }
 
 group = "dev.caoimhe.compactchat"
-version = "2.1.1"
+version = "2.1.2"
 base.archivesName = "compact-chat"
 
 loom {
